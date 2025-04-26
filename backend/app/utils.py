@@ -8,8 +8,6 @@ with open('./model/tokenizer.pkl', 'rb') as f:
 def textPredprocessing(item):
     title = [str(item.title)]
     text = [str(item.text)]
-    # all = title + text
-    # tokenizer.fit_on_texts(all)
 
     sequencesTitle = tokenizer.texts_to_sequences(title)
     sequencesText = tokenizer.texts_to_sequences(text)
